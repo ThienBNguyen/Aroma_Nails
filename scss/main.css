@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #08a9c5;
+  color: azure;
+}
+
+.art-main {
+  width: 60%;
+  margin: 30px auto;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 5px 10px 5px 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-branding .menu-logo {
+  border-radius: 50%;
+  height: 100px;
+}
+
+.menu-branding .menu-logo:hover {
+  height: 110px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.menu-nav {
+  list-style: none;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-nav .nav-item {
+  padding: 0 20px;
+}
+
+.menu-nav .nav-link {
+  text-decoration: none;
+  color: #eee8e8;
+}
+
+.menu-nav .nav-link:hover {
+  color: yellow;
+  font-size: 1.2em;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+/*# sourceMappingURL=main.css.map */

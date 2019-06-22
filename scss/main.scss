@@ -1,0 +1,52 @@
+@import 'config';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $primary-color;
+  color: azure;
+}
+//make a center page
+.art-main {
+  width: 60%;
+  margin: 30px auto;
+}
+// make menu nav bar
+.menu {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 10px 5px 10px;
+  justify-content: space-between;
+  font-size: 1.5em;
+  align-items: center;
+}
+.menu-branding {
+  .menu-logo {
+    border-radius: 50%;
+    height: 100px;
+    &:hover {
+      height: 110px;
+      transition-duration: $duration;
+    }
+  }
+}
+
+.menu-nav {
+  list-style: none;
+  text-transform: uppercase;
+  display: flex;
+  .nav-item {
+    padding: 0 20px;
+  }
+  .nav-link {
+    text-decoration: none;
+    color: $secondary-color;
+    &:hover {
+      color: yellow;
+      font-size: 1.2em;
+      transition-duration: 1s;
+    }
+  }
+}
