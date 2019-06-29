@@ -1,0 +1,52 @@
+@import 'config';
+// .. widescreens
+@include mediaXl {
+  .menu-btn {
+    display: none;
+  }
+}
+.slides {
+  display: none;
+
+  img {
+    height: 25vw;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+//desktops & labtops
+
+@include mediaLg {
+  .menu-nav {
+    display: none;
+  }
+  .menu-btn {
+    margin: 30px 25px;
+    .btn-line {
+      @include btn-line;
+    }
+  }
+  .slides {
+    display: none;
+    img {
+      height: 25vw;
+    }
+  }
+}
+//tables & small laptops
+@include mediaMd {
+  .menu-nav {
+    display: none;
+  }
+  .menu-btn {
+    margin: 30px 25px;
+
+    .btn-line {
+      @include btn-line;
+    }
+  }
+}
+
+// smartphones
+@include mediaSm {
+}

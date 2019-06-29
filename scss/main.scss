@@ -1,4 +1,5 @@
 @import 'config';
+
 * {
   padding: 0;
   margin: 0;
@@ -8,14 +9,23 @@ body {
   background-color: $primary-color;
   color: azure;
 }
+
 //make a center page
 .art-main {
-  width: 60%;
-  margin: 30px auto;
+  border: 2px solid red;
+  width: 70%;
+  margin: 0px auto;
+  display: relative;
+}
+#header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 // make menu nav bar
 .menu {
   display: flex;
+  width: 100%;
   flex-direction: row;
   margin: 5px 10px 5px 10px;
   justify-content: space-between;
@@ -50,3 +60,181 @@ body {
     }
   }
 }
+/* create slide css */
+#home {
+}
+.wrap {
+}
+#slider {
+  position: relative;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -35px;
+  padding: 16px;
+  color: rgb(231, 10, 10);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  font-size: 2em;
+
+  &:hover {
+    background-color: rgba(87, 43, 43, 0.8);
+  }
+}
+#arrow-right {
+  right: 0px;
+  border-radius: 3px 0 0 3px;
+}
+//make the dot
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  &:hover {
+    background-color: #717171;
+  }
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.active {
+  background-color: #717171;
+}
+//intro about us
+.welcome {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 120px 1fr;
+  grid-template-areas:
+    'box1 box1'
+    'box3 box2';
+  margin: 30px;
+}
+.intro {
+  text-align: center;
+  padding: 0.5em;
+  text-transform: capitalize;
+  font-size: 3em;
+  letter-spacing: 0.1em;
+  grid-area: box1;
+}
+.intro-img {
+  grid-area: box2;
+  justify-items: middle;
+  width: 80%;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    border-radius: 10px;
+    // display: none;
+  }
+}
+.intro-p {
+  grid-area: box3;
+
+  align-self: center;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+.services-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.home-services {
+  padding: 10px;
+  border: 2px yellow dotted;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 1.1em;
+  text-align: center;
+  > h1,
+  p {
+    padding: 10px;
+  }
+  > p {
+    font-size: 21px;
+    font-weight: 200;
+  }
+  .btn-home {
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 3px;
+    background: transparent;
+    font-size: 1em;
+    text-transform: capitalize;
+    font-weight: 300;
+    &:hover {
+      color: red;
+    }
+  }
+}
+//create contact info
+.contact {
+  text-align: center;
+  font-size: 3em;
+  text-transform: capitalize;
+  letter-spacing: 0.1em;
+  margin: 2.5em;
+  > p {
+    font-size: 30px;
+    margin: 20px;
+  }
+  > h1 {
+    font-weight: 50;
+    font-style: italic;
+  }
+}
+.footer {
+  text-align: center;
+  .reference {
+    padding: 20px 0 30px 0;
+  }
+}
+.main-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  font-size: 1.4em;
+}
+.location {
+  > a {
+    text-transform: none;
+    text-decoration: none;
+    color: white;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+.icon {
+  > ul > li {
+    padding: 10px;
+  }
+}
+li {
+  list-style-type: none;
+}
+
+@import 'mobile';
