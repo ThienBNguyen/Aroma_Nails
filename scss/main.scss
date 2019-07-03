@@ -190,6 +190,33 @@ body {
     }
   }
 }
+
+//make arrow left and right for services
+.manicure-arrow {
+  text-align: center;
+  width: 600px;
+}
+.manicure-arrow span {
+  padding: 0;
+  font-size: 20px;
+}
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid blue;
+  display: inline-block;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  display: inline-block;
+  border-right: 8px solid blue;
+}
 //create contact info
 .contact {
   text-align: center;
