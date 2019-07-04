@@ -6,12 +6,11 @@
 }
 
 body {
-  background-color: #08a9c5;
-  color: azure;
+  background-image: url("../dist/img/main-bg.jpg");
+  background-size: cover;
 }
 
 .art-main {
-  border: 2px solid red;
   width: 55%;
   margin: 0px auto;
   display: relative;
@@ -71,7 +70,7 @@ body {
 
 .menu-nav .nav-link {
   text-decoration: none;
-  color: #eee8e8;
+  color: #033046;
 }
 
 .menu-nav .nav-link:hover {
@@ -84,6 +83,11 @@ body {
 /* create slide css */
 #slider {
   position: relative;
+}
+
+#slider img {
+  border-radius: 10px;
+  z-index: 0;
 }
 
 .arrow {
@@ -144,6 +148,7 @@ body {
 }
 
 .welcome {
+  background-image: url(../dist/img/main-control-bg.jpg);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -151,7 +156,8 @@ body {
   -ms-grid-rows: 120px 1fr;
       grid-template-rows: 120px 1fr;
       grid-template-areas: 'box1 box1' 'box3 box2';
-  margin: 30px;
+  padding: 30px;
+  border-radius: 10px;
 }
 
 .intro {
@@ -199,13 +205,31 @@ body {
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 10px;
+}
+
+.services-home .manicure {
+  background-color: #debee2;
+}
+
+.services-home .pedicure {
+  background-color: #cfeaeb;
+}
+
+.services-home .artificial-nail {
+  background-color: #d8a2bb;
+}
+
+.services-home .additional {
+  background-color: #e7c1c8;
 }
 
 .home-services {
-  padding: 10px;
-  border: 2px yellow dotted;
+  padding: 10px 0;
+  border: 2px #777764 dotted;
   border-radius: 10px;
-  margin: 10px;
   font-size: 1.1em;
   text-align: center;
 }
@@ -237,12 +261,32 @@ body {
   color: red;
 }
 
+.manicures {
+  background-color: #debee2;
+  border-radius: 10px;
+}
+
+.pedicures {
+  background-color: #cfeaeb;
+  border-radius: 10px;
+}
+
+.waxing {
+  background-color: #d8a2bb;
+  border-radius: 10px;
+}
+
+.kids {
+  background-color: #e7c1c8;
+  border-radius: 10px;
+}
+
 .service-section span {
   float: right;
 }
 
 .service-section {
-  padding: 0 40px;
+  padding: 60px;
 }
 
 .service-section .service-header {
@@ -303,11 +347,15 @@ body {
 }
 
 .contact {
+  border-radius: 10px;
+  background-image: url(../dist/img/main-control-bg.jpg);
+  background-size: cover;
+  width: 100%;
   text-align: center;
   font-size: 3em;
   text-transform: capitalize;
   letter-spacing: 0.1em;
-  margin: 2.5em;
+  padding: 80px 0px;
 }
 
 .contact > p {
@@ -322,10 +370,23 @@ body {
 
 .footer {
   text-align: center;
+  background-color: #033046;
+  padding: 40px 0;
 }
 
 .footer .reference {
-  padding: 20px 0 30px 0;
+  padding: 20px 0 0 0;
+  color: white;
+}
+
+.footer .reference a {
+  color: white;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.footer .reference a:hover {
+  color: #08a9c5;
 }
 
 .main-footer {
@@ -335,20 +396,29 @@ body {
       grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   font-size: 1.4em;
+  color: white;
 }
 
 .location > a {
   text-transform: none;
-  text-decoration: none;
   color: white;
+  text-decoration: none;
 }
 
 .location > a:hover {
-  color: #eee8e8;
+  color: #08a9c5;
 }
 
 .icon > ul > li {
   padding: 10px;
+}
+
+.fab {
+  color: white;
+}
+
+.fab:hover {
+  color: #08a9c5;
 }
 
 li {

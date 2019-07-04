@@ -6,13 +6,13 @@
   box-sizing: border-box;
 }
 body {
-  background-color: $primary-color;
-  color: azure;
+  background-image: url('../dist/img/main-bg.jpg');
+  background-size: cover;
+  // color: azure;
 }
 
 //make a center page
 .art-main {
-  border: 2px solid red;
   width: 55%;
   margin: 0px auto;
   display: relative;
@@ -67,6 +67,11 @@ body {
 }
 #slider {
   position: relative;
+
+  img {
+    border-radius: $services-radius;
+    z-index: 0;
+  }
 }
 
 .arrow {
@@ -102,6 +107,10 @@ body {
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+  // position: absolute;
+  // z-index: 1;
+  // top: 95%;
+  // right: 100px;
   &:hover {
     background-color: #717171;
   }
@@ -119,13 +128,15 @@ body {
 }
 //intro about us
 .welcome {
+  background-image: $control-image;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 120px 1fr;
   grid-template-areas:
     'box1 box1'
     'box3 box2';
-  margin: 30px;
+  padding: 30px;
+  border-radius: $services-radius;
 }
 .intro {
   text-align: center;
@@ -158,14 +169,29 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px; // home services
+  .manicure {
+    background-color: $manicure-color;
+  }
+  .pedicure {
+    background-color: $pedicure-color;
+  }
+  .artificial-nail {
+    background-color: $waxing-color;
+  }
+  .additional {
+    background-color: $kid-color;
+  }
 }
 .home-services {
-  padding: 10px;
-  border: 2px yellow dotted;
+  padding: 10px 0;
+  border: 2px rgb(119, 119, 100) dotted;
   border-radius: 10px;
-  margin: 10px;
+  // margin: 10px;
   font-size: 1.1em;
   text-align: center;
+
   > h1,
   p {
     padding: 10px;
@@ -190,13 +216,30 @@ body {
     }
   }
 }
+// manicure page
+.manicures {
+  background-color: $manicure-color;
+  border-radius: $services-radius;
+}
+.pedicures {
+  background-color: $pedicure-color;
+  border-radius: $services-radius;
+}
+.waxing {
+  background-color: $waxing-color;
+  border-radius: $services-radius;
+}
+.kids {
+  background-color: $kid-color;
+  border-radius: $services-radius;
+}
 // make span float right
 .service-section span {
   float: right;
 }
 //service section
 .service-section {
-  padding: 0 40px;
+  padding: 60px;
   .service-header {
     text-align: center;
     font-size: 3em;
@@ -251,11 +294,16 @@ body {
 
 //create contact info
 .contact {
+  border-radius: $services-radius;
+  background-image: $control-image;
+  background-size: cover;
+  width: 100%;
   text-align: center;
   font-size: 3em;
   text-transform: capitalize;
   letter-spacing: 0.1em;
-  margin: 2.5em;
+  // margin: 2.5em;
+  padding: 80px 0px;
   > p {
     font-size: 30px;
     margin: 20px;
@@ -267,8 +315,19 @@ body {
 }
 .footer {
   text-align: center;
+  background-color: $secondary-color;
+  padding: 40px 0;
   .reference {
-    padding: 20px 0 30px 0;
+    padding: 20px 0 0 0;
+    color: white;
+    a {
+      color: white;
+      text-transform: none;
+      text-decoration: none;
+      &:hover {
+        color: $primary-color;
+      }
+    }
   }
 }
 .main-footer {
@@ -276,20 +335,28 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   font-size: 1.4em;
+  color: white;
 }
 .location {
   > a {
     text-transform: none;
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+
     &:hover {
-      color: $secondary-color;
+      color: $primary-color;
     }
   }
 }
 .icon {
   > ul > li {
     padding: 10px;
+  }
+}
+.fab {
+  color: white;
+  &:hover {
+    color: $primary-color;
   }
 }
 li {
