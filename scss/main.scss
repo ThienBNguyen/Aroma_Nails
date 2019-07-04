@@ -13,7 +13,7 @@ body {
 //make a center page
 .art-main {
   border: 2px solid red;
-  width: 70%;
+  width: 55%;
   margin: 0px auto;
   display: relative;
 }
@@ -190,16 +190,47 @@ body {
     }
   }
 }
-
+// make span float right
+.service-section span {
+  float: right;
+}
+//service section
+.service-section {
+  padding: 0 40px;
+  .service-header {
+    text-align: center;
+    font-size: 3em;
+    padding: 10px;
+    font-weight: 300;
+  }
+  h2 {
+    padding: 10px 0;
+  }
+  div {
+    font-size: 1.1em;
+    font-weight: 300px;
+    padding: 10px 0;
+    h4 {
+      font-size: 1.2em;
+    }
+    p {
+      width: 85%;
+    }
+  }
+}
 //make arrow left and right for services
 .manicure-arrow {
   text-align: center;
-  width: 600px;
 }
-.manicure-arrow span {
+.arrow-span-one {
+  display: none !important;
+}
+.manicure-arrow div {
   padding: 0;
   font-size: 20px;
+  display: inline-block;
 }
+
 .arrow-right {
   width: 0;
   height: 0;
@@ -217,6 +248,7 @@ body {
   display: inline-block;
   border-right: 8px solid blue;
 }
+
 //create contact info
 .contact {
   text-align: center;

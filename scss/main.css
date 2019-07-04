@@ -12,7 +12,7 @@ body {
 
 .art-main {
   border: 2px solid red;
-  width: 70%;
+  width: 55%;
   margin: 0px auto;
   display: relative;
 }
@@ -237,14 +237,51 @@ body {
   color: red;
 }
 
-.manicure-arrow {
-  text-align: center;
-  width: 600px;
+.service-section span {
+  float: right;
 }
 
-.manicure-arrow span {
+.service-section {
+  padding: 0 40px;
+}
+
+.service-section .service-header {
+  text-align: center;
+  font-size: 3em;
+  padding: 10px;
+  font-weight: 300;
+}
+
+.service-section h2 {
+  padding: 10px 0;
+}
+
+.service-section div {
+  font-size: 1.1em;
+  font-weight: 300px;
+  padding: 10px 0;
+}
+
+.service-section div h4 {
+  font-size: 1.2em;
+}
+
+.service-section div p {
+  width: 85%;
+}
+
+.manicure-arrow {
+  text-align: center;
+}
+
+.arrow-span-one {
+  display: none !important;
+}
+
+.manicure-arrow div {
   padding: 0;
   font-size: 20px;
+  display: inline-block;
 }
 
 .arrow-right {
