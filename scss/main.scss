@@ -129,6 +129,7 @@ body {
 //intro about us
 .welcome {
   background-image: $control-image;
+  background-size: cover;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 120px 1fr;
@@ -137,6 +138,7 @@ body {
     'box3 box2';
   padding: 30px;
   border-radius: $services-radius;
+  color: $home-color;
 }
 .intro {
   text-align: center;
@@ -171,6 +173,12 @@ body {
   grid-template-rows: 1fr 1fr;
   column-gap: 10px;
   row-gap: 10px; // home services
+  a {
+    text-decoration: none;
+    &:hover {
+      color: blue;
+    }
+  }
   .manicure {
     background-color: $manicure-color;
   }
@@ -212,7 +220,8 @@ body {
     text-transform: capitalize;
     font-weight: 300;
     &:hover {
-      color: red;
+      color: rgb(61, 174, 226);
+      background-color: rgb(245, 242, 238);
     }
   }
 }
@@ -220,6 +229,9 @@ body {
 .manicures {
   background-color: $manicure-color;
   border-radius: $services-radius;
+  #manicure-two {
+    display: none;
+  }
 }
 .pedicures {
   background-color: $pedicure-color;
@@ -228,6 +240,9 @@ body {
 .waxing {
   background-color: $waxing-color;
   border-radius: $services-radius;
+  #waxing-two {
+    display: none;
+  }
 }
 .kids {
   background-color: $kid-color;
@@ -262,36 +277,51 @@ body {
   }
 }
 //make arrow left and right for services
-.manicure-arrow {
+.manicure-arrow,
+#waxing-arrow {
   text-align: center;
+  .arrow-span-two,
+  #waxing-arrow-span-two {
+    display: none;
+  }
 }
-.arrow-span-one {
-  display: none !important;
+#waxing-arrow {
+  div {
+    display: inline-block;
+    font-size: 20px;
+  }
 }
 .manicure-arrow div {
   padding: 0;
   font-size: 20px;
   display: inline-block;
 }
-
-.arrow-right {
+#waxing-arrow-left,
+#waxing-arrow-right {
+  padding: 0;
+  font-size: 20px;
+  display: inline-block;
+}
+.arrow-right,
+#waxing-arrow-right {
+  cursor: pointer;
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
-  border-left: 8px solid blue;
+  border-left: 8px solid rgb(245, 59, 26);
   display: inline-block;
 }
-
-.arrow-left {
+.arrow-left,
+#waxing-arrow-left {
+  cursor: pointer;
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
   display: inline-block;
-  border-right: 8px solid blue;
+  border-right: 8px solid rgb(245, 59, 26);
 }
-
 //create contact info
 .contact {
   border-radius: $services-radius;

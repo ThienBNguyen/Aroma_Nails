@@ -56,3 +56,42 @@ function reset() {
     slides[i].style.display = 'none';
   }
 }
+// click arrow right next page manicure
+let arrowRightPage = document.querySelector('.arrow-right');
+arrowRightPage.addEventListener('click', function() {
+  document.querySelector('.arrow-span-two').style.display = 'inline-block';
+  document.querySelector('.arrow-span-one').style.display = 'none';
+  document.querySelector('#manicure-one').style.display = 'none';
+  document.querySelector('#manicure-two').style.display = 'block';
+});
+// click arrow left prev page manicure
+let arrowLeftPage = document.querySelector('.arrow-left');
+arrowLeftPage.addEventListener('click', function() {
+  document.querySelector('.arrow-span-two').style.display = 'none';
+  document.querySelector('.arrow-span-one').style.display = 'inline-block';
+  document.querySelector('#manicure-two').style.display = 'none';
+  document.querySelector('#manicure-one').style.display = 'block';
+});
+
+// click arrow right next page waxing
+let waxingArrowRightPage = document.querySelector('#waxing-arrow-right');
+waxingArrowRightPage.addEventListener('click', function() {
+  document.querySelector('#waxing-arrow-span-two').style.display =
+    'inline-block';
+  document.querySelector('#waxing-arrow-span-one').style.display = 'none';
+  document.querySelector('#waxing-one').style.display = 'none';
+  document.querySelector('#waxing-two').style.display = 'block';
+});
+// click arrow left prev page waxing
+let waxingArrowLeftPage = document.querySelector('#waxing-arrow-left');
+waxingArrowLeftPage.addEventListener('click', function() {
+  document.querySelector('#waxing-arrow-span-two').style.display = 'none';
+  document.querySelector('#waxing-arrow-span-one').style.display =
+    'inline-block';
+  document.querySelector('#waxing-two').style.display = 'none';
+  document.querySelector('#waxing-one').style.display = 'block';
+});
+//nav bar function
+document.querySelector('.menu-btn').addEventListener('click', function() {
+  document.querySelector('.nav-control').style.display = 'block';
+});

@@ -1,6 +1,10 @@
 @import 'config';
 // .. widescreens
+
 @include mediaXl {
+  .art-main {
+    width: 50%;
+  }
   .menu-btn {
     display: none;
   }
@@ -17,36 +21,87 @@
 //desktops & labtops
 
 @include mediaLg {
-  .menu-nav {
-    display: none;
-  }
   .menu-btn {
     margin: 30px 25px;
     .btn-line {
-      @include btn-line;
+      @include btn-lines;
     }
   }
   .slides {
     display: none;
     img {
-      height: 25vw;
+      height: 35vw;
     }
   }
+  //welcome section
+  .art-main {
+    width: 100%;
+  }
+  .welcome {
+    .intro {
+      font-size: 2.6em;
+    }
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-control {
+    // display: none;s
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: rgb(184, 223, 216);
+    top: 115px;
+    left: 0;
+    transition: 0.5s;
+    z-index: 100;
+    .menu-nav {
+      padding-top: 20%;
+      display: block;
+      text-align: center;
+    }
+    .nav-item {
+      padding: 30px;
+    }
+  }
+
+  // .slides {
+  //   display: none;
+  //   img {
+  //     height: 25vw;
+  //   }
+  // }
 }
+
 //tables & small laptops
 @include mediaMd {
+  .welcome {
+    display: block;
+    color: $home-color;
+    background-size: cover;
+  }
+  //services
+  .services-home {
+    display: block;
+  }
+  .art-main {
+    width: 100%;
+  }
+  .slides {
+    .img {
+      height: 30vw;
+    }
+  }
   .menu-nav {
     display: none;
-  }
-  .menu-btn {
-    margin: 30px 25px;
-
-    .btn-line {
-      @include btn-line;
-    }
   }
 }
 
 // smartphones
 @include mediaSm {
+  .main-footer {
+    display: block;
+  }
 }

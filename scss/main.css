@@ -149,6 +149,7 @@ body {
 
 .welcome {
   background-image: url(../dist/img/main-control-bg.jpg);
+  background-size: cover;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -158,6 +159,7 @@ body {
       grid-template-areas: 'box1 box1' 'box3 box2';
   padding: 30px;
   border-radius: 10px;
+  color: coral;
 }
 
 .intro {
@@ -210,6 +212,14 @@ body {
   row-gap: 10px;
 }
 
+.services-home a {
+  text-decoration: none;
+}
+
+.services-home a:hover {
+  color: blue;
+}
+
 .services-home .manicure {
   background-color: #debee2;
 }
@@ -258,12 +268,17 @@ body {
 }
 
 .home-services .btn-home:hover {
-  color: red;
+  color: #3daee2;
+  background-color: #f5f2ee;
 }
 
 .manicures {
   background-color: #debee2;
   border-radius: 10px;
+}
+
+.manicures #manicure-two {
+  display: none;
 }
 
 .pedicures {
@@ -274,6 +289,10 @@ body {
 .waxing {
   background-color: #d8a2bb;
   border-radius: 10px;
+}
+
+.waxing #waxing-two {
+  display: none;
 }
 
 .kids {
@@ -314,12 +333,21 @@ body {
   width: 85%;
 }
 
-.manicure-arrow {
+.manicure-arrow,
+#waxing-arrow {
   text-align: center;
 }
 
-.arrow-span-one {
-  display: none !important;
+.manicure-arrow .arrow-span-two,
+.manicure-arrow #waxing-arrow-span-two,
+#waxing-arrow .arrow-span-two,
+#waxing-arrow #waxing-arrow-span-two {
+  display: none;
+}
+
+#waxing-arrow div {
+  display: inline-block;
+  font-size: 20px;
 }
 
 .manicure-arrow div {
@@ -328,22 +356,33 @@ body {
   display: inline-block;
 }
 
-.arrow-right {
-  width: 0;
-  height: 0;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-left: 8px solid blue;
+#waxing-arrow-left,
+#waxing-arrow-right {
+  padding: 0;
+  font-size: 20px;
   display: inline-block;
 }
 
-.arrow-left {
+.arrow-right,
+#waxing-arrow-right {
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #f53b1a;
+  display: inline-block;
+}
+
+.arrow-left,
+#waxing-arrow-left {
+  cursor: pointer;
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
   display: inline-block;
-  border-right: 8px solid blue;
+  border-right: 8px solid #f53b1a;
 }
 
 .contact {
@@ -425,7 +464,10 @@ li {
   list-style-type: none;
 }
 
-@media screen and (min-width: 1171px) {
+@media screen and (min-width: 1380px) {
+  .art-main {
+    width: 50%;
+  }
   .menu-btn {
     display: none;
   }
@@ -441,10 +483,7 @@ li {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1170px) {
-  .menu-nav {
-    display: none;
-  }
+@media screen and (max-width: 1380px) {
   .menu-btn {
     margin: 30px 25px;
   }
@@ -452,7 +491,7 @@ li {
     width: 30px;
     height: 5px;
     margin: 0.5rem;
-    background-color: #f1630b;
+    background-color: coral;
     -webkit-transition: all 2s ease;
     transition: all 2s ease;
   }
@@ -460,24 +499,61 @@ li {
     display: none;
   }
   .slides img {
-    height: 25vw;
+    height: 35vw;
+  }
+  .art-main {
+    width: 100%;
+  }
+  .welcome .intro {
+    font-size: 2.6em;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-control {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: #b8dfd8;
+    top: 115px;
+    left: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 100;
+  }
+  .nav-control .menu-nav {
+    padding-top: 20%;
+    display: block;
+    text-align: center;
+  }
+  .nav-control .nav-item {
+    padding: 30px;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .welcome {
+    display: block;
+    color: coral;
+    background-size: cover;
+  }
+  .services-home {
+    display: block;
+  }
+  .art-main {
+    width: 100%;
+  }
+  .slides .img {
+    height: 30vw;
+  }
   .menu-nav {
     display: none;
   }
-  .menu-btn {
-    margin: 30px 25px;
-  }
-  .menu-btn .btn-line {
-    width: 30px;
-    height: 5px;
-    margin: 0.5rem;
-    background-color: #f1630b;
-    -webkit-transition: all 2s ease;
-    transition: all 2s ease;
+}
+
+@media screen and (max-width: 500px) {
+  .main-footer {
+    display: block;
   }
 }
 /*# sourceMappingURL=main.css.map */
