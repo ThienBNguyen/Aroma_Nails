@@ -43,6 +43,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0;
 }
 
 .menu-branding .menu-logo {
@@ -51,7 +52,7 @@ body {
 }
 
 .menu-branding .menu-logo:hover {
-  height: 110px;
+  cursor: pointer;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
 }
@@ -64,20 +65,24 @@ body {
   display: flex;
 }
 
-.menu-nav .nav-item {
-  padding: 0 20px;
+.menu-nav .current {
+  color: #720130;
+  background-color: #c6a0cf;
+  border-radius: 10px;
 }
 
 .menu-nav .nav-link {
   text-decoration: none;
   color: #033046;
+  padding: 40px 35px;
 }
 
 .menu-nav .nav-link:hover {
-  color: yellow;
-  font-size: 1.2em;
+  color: #720130;
+  background-color: #c6a0cf;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
+  border-radius: 10px;
 }
 
 /* create slide css */
@@ -159,7 +164,7 @@ body {
       grid-template-areas: 'box1 box1' 'box3 box2';
   padding: 30px;
   border-radius: 10px;
-  color: coral;
+  color: #720130;
 }
 
 .intro {
@@ -225,7 +230,7 @@ body {
 }
 
 .services-home .pedicure {
-  background-color: #cfeaeb;
+  background-color: #ebcaf3;
 }
 
 .services-home .artificial-nail {
@@ -282,7 +287,7 @@ body {
 }
 
 .pedicures {
-  background-color: #cfeaeb;
+  background-color: #ebcaf3;
   border-radius: 10px;
 }
 
@@ -491,7 +496,7 @@ li {
     width: 30px;
     height: 5px;
     margin: 0.5rem;
-    background-color: coral;
+    background-color: #720130;
     -webkit-transition: all 2s ease;
     transition: all 2s ease;
   }
@@ -507,8 +512,8 @@ li {
   .welcome .intro {
     font-size: 2.6em;
   }
-  .menu-toggle {
-    display: block;
+  .nav-control.active {
+    left: 0;
   }
   .nav-control {
     position: absolute;
@@ -516,13 +521,13 @@ li {
     height: calc(100vh - 50px);
     background: #b8dfd8;
     top: 115px;
-    left: 0;
+    left: -100%;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     z-index: 100;
   }
   .nav-control .menu-nav {
-    padding-top: 20%;
+    padding-top: 25%;
     display: block;
     text-align: center;
   }
@@ -534,7 +539,7 @@ li {
 @media screen and (max-width: 768px) {
   .welcome {
     display: block;
-    color: coral;
+    color: #720130;
     background-size: cover;
   }
   .services-home {

@@ -43,22 +43,21 @@
     }
   }
 
-  .menu-toggle {
-    display: block;
+  .nav-control.active {
+    left: 0;
   }
-
   .nav-control {
-    // display: none;s
+    // display: none;
     position: absolute;
     width: 100%;
     height: calc(100vh - 50px);
     background: rgb(184, 223, 216);
     top: 115px;
-    left: 0;
+    left: -100%;
     transition: 0.5s;
     z-index: 100;
     .menu-nav {
-      padding-top: 20%;
+      padding-top: 25%;
       display: block;
       text-align: center;
     }

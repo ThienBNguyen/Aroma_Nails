@@ -93,5 +93,14 @@ waxingArrowLeftPage.addEventListener('click', function() {
 });
 //nav bar function
 document.querySelector('.menu-btn').addEventListener('click', function() {
-  document.querySelector('.nav-control').style.display = 'block';
+  document.querySelector('.nav-control').classList.toggle('active');
+});
+let listRemove = document.querySelectorAll('li');
+listRemove.forEach(li => {
+  li.addEventListener('click', function() {
+    document.querySelector('.nav-control').classList.remove('active');
+  });
+});
+document.querySelector('#phone-number').addEventListener('click', function() {
+  document.querySelector('.tell-num').innerHTML = '512-770-6007';
 });
