@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url('../dist/img/main-bg.jpg');
+  background-image: url('../img/main-bg.jpg');
   background-size: cover;
   // color: azure;
 }
@@ -50,7 +50,7 @@ body {
   display: flex;
   .current {
     color: $home-color;
-    background-color: rgb(198, 160, 207);
+    background-color: rgb(240, 237, 241);
     border-radius: $services-radius;
   }
   .nav-link {
@@ -60,7 +60,7 @@ body {
 
     &:hover {
       color: $home-color;
-      background-color: rgb(198, 160, 207);
+      background-color: rgb(240, 237, 241);
       transition-duration: 1s;
       border-radius: $services-radius;
     }
@@ -73,7 +73,6 @@ body {
 }
 #slider {
   position: relative;
-
   img {
     border-radius: $services-radius;
     z-index: 0;
@@ -148,11 +147,11 @@ body {
 }
 .intro {
   text-align: center;
-  padding: 0.5em;
   text-transform: capitalize;
-  font-size: 3em;
+  font-size: 3.2em;
   letter-spacing: 0.1em;
   grid-area: box1;
+  text-shadow: 2px 2px 8px #bcdee4;
 }
 .intro-img {
   grid-area: box2;
@@ -353,6 +352,7 @@ body {
   text-align: center;
   background-color: $secondary-color;
   padding: 40px 0;
+  border-radius: $services-radius;
   .reference {
     padding: 20px 0 0 0;
     color: white;

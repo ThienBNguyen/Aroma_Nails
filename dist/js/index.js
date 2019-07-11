@@ -101,6 +101,6 @@ listRemove.forEach(li => {
     document.querySelector('.nav-control').classList.remove('active');
   });
 });
-document.querySelector('#phone-number').addEventListener('click', function() {
-  document.querySelector('.tell-num').innerHTML = '512-770-6007';
-});
+function changeText() {
+  document.querySelector('.call').innerHTML = '512-770-6007';
+}

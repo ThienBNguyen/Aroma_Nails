@@ -42,7 +42,6 @@
       font-size: 2.6em;
     }
   }
-
   .nav-control.active {
     left: 0;
   }
@@ -50,28 +49,26 @@
     // display: none;
     position: absolute;
     width: 100%;
-    height: calc(100vh - 50px);
-    background: rgb(184, 223, 216);
-    top: 115px;
+    height: calc(100vh - 60px);
+    background: rgb(233, 188, 233);
+    top: 100px;
     left: -100%;
     transition: 0.5s;
     z-index: 100;
     .menu-nav {
       padding-top: 25%;
+      width: 100%;
       display: block;
       text-align: center;
+
+      .nav-link {
+        padding: 30px;
+      }
     }
     .nav-item {
       padding: 30px;
     }
   }
-
-  // .slides {
-  //   display: none;
-  //   img {
-  //     height: 25vw;
-  //   }
-  // }
 }
 
 //tables & small laptops
@@ -95,6 +92,28 @@
   }
   .menu-nav {
     display: none;
+  }
+  #slider {
+    img {
+      border-radius: 0;
+    }
+  }
+  .welcome {
+    border-radius: 0;
+  }
+  .manicures,
+  .pedicures,
+  .waxing,
+  .kids,
+  .contact,
+  .home-services {
+    border-radius: 0;
+    border: none;
+  }
+  .intro-img {
+    img {
+      border-radius: 0;
+    }
   }
 }
 

@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url("../dist/img/main-bg.jpg");
+  background-image: url("../img/main-bg.jpg");
   background-size: cover;
 }
 
@@ -67,7 +67,7 @@ body {
 
 .menu-nav .current {
   color: #720130;
-  background-color: #c6a0cf;
+  background-color: #f0edf1;
   border-radius: 10px;
 }
 
@@ -79,7 +79,7 @@ body {
 
 .menu-nav .nav-link:hover {
   color: #720130;
-  background-color: #c6a0cf;
+  background-color: #f0edf1;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   border-radius: 10px;
@@ -153,7 +153,7 @@ body {
 }
 
 .welcome {
-  background-image: url(../dist/img/main-control-bg.jpg);
+  background-image: url(../img/main-control-bg.jpg);
   background-size: cover;
   display: -ms-grid;
   display: grid;
@@ -169,14 +169,14 @@ body {
 
 .intro {
   text-align: center;
-  padding: 0.5em;
   text-transform: capitalize;
-  font-size: 3em;
+  font-size: 3.2em;
   letter-spacing: 0.1em;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: box1;
+  text-shadow: 2px 2px 8px #bcdee4;
 }
 
 .intro-img {
@@ -392,7 +392,7 @@ body {
 
 .contact {
   border-radius: 10px;
-  background-image: url(../dist/img/main-control-bg.jpg);
+  background-image: url(../img/main-control-bg.jpg);
   background-size: cover;
   width: 100%;
   text-align: center;
@@ -416,6 +416,7 @@ body {
   text-align: center;
   background-color: #033046;
   padding: 40px 0;
+  border-radius: 10px;
 }
 
 .footer .reference {
@@ -518,9 +519,9 @@ li {
   .nav-control {
     position: absolute;
     width: 100%;
-    height: calc(100vh - 50px);
-    background: #b8dfd8;
-    top: 115px;
+    height: calc(100vh - 60px);
+    background: #e9bce9;
+    top: 100px;
     left: -100%;
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -528,8 +529,12 @@ li {
   }
   .nav-control .menu-nav {
     padding-top: 25%;
+    width: 100%;
     display: block;
     text-align: center;
+  }
+  .nav-control .menu-nav .nav-link {
+    padding: 30px;
   }
   .nav-control .nav-item {
     padding: 30px;
@@ -553,6 +558,24 @@ li {
   }
   .menu-nav {
     display: none;
+  }
+  #slider img {
+    border-radius: 0;
+  }
+  .welcome {
+    border-radius: 0;
+  }
+  .manicures,
+  .pedicures,
+  .waxing,
+  .kids,
+  .contact,
+  .home-services {
+    border-radius: 0;
+    border: none;
+  }
+  .intro-img img {
+    border-radius: 0;
   }
 }
 
