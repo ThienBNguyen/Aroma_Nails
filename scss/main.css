@@ -161,7 +161,8 @@ body {
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 120px 1fr;
       grid-template-rows: 120px 1fr;
-      grid-template-areas: 'box1 box1' 'box3 box2';
+      grid-template-areas: 'box1 box1'
+ 'box3 box2';
   padding: 30px;
   border-radius: 10px;
   color: #720130;
@@ -341,6 +342,7 @@ body {
 .manicure-arrow,
 #waxing-arrow {
   text-align: center;
+  font-size: 20px;
 }
 
 .manicure-arrow .arrow-span-two,
