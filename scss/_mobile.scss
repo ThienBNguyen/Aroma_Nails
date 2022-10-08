@@ -1,0 +1,125 @@
+// @import 'config';
+// // .. widescreens
+
+// @include mediaXl {
+//   .art-main {
+//     width: 50%;
+//   }
+//   .menu-btn {
+//     display: none;
+//   }
+// }
+// .slides {
+//   display: none;
+
+//   img {
+//     height: 25vw;
+//     width: 100%;
+//     margin: 0 auto;
+//   }
+// }
+// //desktops & labtops
+
+// @include mediaLg {
+//   .menu-btn {
+//     margin: 30px 25px;
+//     .btn-line {
+//       @include btn-lines;
+//     }
+//   }
+//   .slides {
+//     display: none;
+//     img {
+//       height: 35vw;
+//     }
+//   }
+//   //welcome section
+//   .art-main {
+//     width: 100%;
+//   }
+//   .welcome {
+//     .intro {
+//       font-size: 2.6em;
+//     }
+//   }
+//   .nav-control.active {
+//     left: 0;
+//   }
+//   .nav-control {
+//     // display: none;
+//     position: absolute;
+//     width: 100%;
+//     height: calc(100vh - 60px);
+//     background: rgb(233, 188, 233);
+//     top: 100px;
+//     left: -100%;
+//     transition: 0.5s;
+//     z-index: 100;
+//     .menu-nav {
+//       padding-top: 25%;
+//       width: 100%;
+//       display: block;
+//       text-align: center;
+
+//       .nav-link {
+//         padding: 30px;
+//       }
+//     }
+//     .nav-item {
+//       padding: 30px;
+//     }
+//   }
+// }
+
+// //tables & small laptops
+// @include mediaMd {
+//   .welcome {
+//     display: block;
+//     color: $home-color;
+//     background-size: cover;
+//   }
+//   //services
+//   .services-home {
+//     display: block;
+//   }
+//   .art-main {
+//     width: 100%;
+//   }
+//   .slides {
+//     .img {
+//       height: 30vw;
+//     }
+//   }
+//   .menu-nav {
+//     display: none;
+//   }
+//   #slider {
+//     img {
+//       border-radius: 0;
+//     }
+//   }
+//   .welcome {
+//     border-radius: 0;
+//   }
+//   .manicures,
+//   .pedicures,
+//   .waxing,
+//   .kids,
+//   .contact,
+//   .home-services {
+//     border-radius: 0;
+//     border: none;
+//   }
+//   .intro-img {
+//     img {
+//       border-radius: 0;
+//     }
+//   }
+// }
+
+// // smartphones
+// @include mediaSm {
+//   .main-footer {
+//     display: block;
+//   }
+// }
